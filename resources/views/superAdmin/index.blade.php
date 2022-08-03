@@ -9,6 +9,6 @@ hello
 
 @section('superAdminScript')
     <script>
-alert("hello");
+console.log('ok');
     </script>
 @endsection
