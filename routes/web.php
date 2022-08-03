@@ -14,7 +14,7 @@ use App\Http\Controllers\Admin;
 */
 
 // Route::get('/', function () {
-//     return view('welcome');
+//     return view('weome');
 // });
 
 Route::get('/', [Admin::class, 'index']);
