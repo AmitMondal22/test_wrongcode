@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class Admin extends Controller
 {
     public function index(){
-        $a="abc";
+        $a="abc navendu";
         return $a;
     }
 }
