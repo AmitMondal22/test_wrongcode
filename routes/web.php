@@ -17,4 +17,5 @@ use App\Http\Controllers\Admin;
 //     return view('weome');
 // });
 
-Route::get('/', [Admin::class, 'index']);
+Route::get('/home', [Admin::class, 'index']);
+Route::get('/', [Admin::class, 'home'])->name('home');

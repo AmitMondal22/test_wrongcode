@@ -10,4 +10,7 @@ class Admin extends Controller
         $a="abc navendu amit pritam";
         return $a;
     }
+    public function home(){
+        return view('superAdmin.index');
+    }
 }
