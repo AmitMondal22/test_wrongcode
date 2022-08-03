@@ -46,28 +46,37 @@
 
 <body>
   <!-- Layout wrapper -->
-  <div class="layout-wrapper layout-content-navbar">
-    <div class="layout-container">
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
 
 
-<!-- sidebar -->
-@include('superAdmin.common.sidebar')
-
-
-
-    <div class="layout-page">
-    @include('superAdmin.common.header')
-   @yield('supetAdminContent')
+            <!-- sidebar -->
+            @include('superAdmin.common.sidebar')
 
 
 
-</div>
-      <!-- / Layout page -->
-    </div>
+                <div class="layout-page">
+                    @include('superAdmin.common.header')
+                    <!-- Content wrapper -->
+                        <div class="content-wrapper">
+                                    <!-- Content -->
+                            @yield('supetAdminContent')
+
+
+
+                            @include('superAdmin.common.footer')
+
+                        <div class="content-backdrop fade"></div>
+
+                </div>
+            <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+        </div>
 
     <!-- Overlay -->
-    <div class="layout-overlay layout-menu-toggle"></div>
-  </div>
+        <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
   <!-- / Layout wrapper -->
 
   <div class="buy-now">
