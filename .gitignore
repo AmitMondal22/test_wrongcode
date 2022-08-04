@@ -11,6 +11,7 @@ Homestead.json
 Homestead.yaml
 auth.json
 npm-debug.log
-yarn-error.log
+yarn-error.loggit add .gitignore 
 /.idea
 /.vscode
+debug.log
