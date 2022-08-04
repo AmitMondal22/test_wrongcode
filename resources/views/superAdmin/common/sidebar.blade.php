@@ -48,7 +48,8 @@
                 </g>
               </svg> -->
             </span>
-            <span class="app-brand-text demo menu-text fw-bolder ms-2" style="color:rgb(105, 108, 255) ;">Sneat</span>
+            <span class="app-brand-text demo menu-text fw-bolder ms-2" >Sneat</span>
+            <!-- style="color:rgb(105, 108, 255) ;" -->
           </a>
 
           <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
