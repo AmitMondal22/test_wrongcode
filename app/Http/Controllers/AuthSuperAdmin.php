@@ -48,6 +48,7 @@ class AuthSuperAdmin extends Controller
 
     public function logout(){
         Session::flush();
+        return redirect('s-admin/login');
         // Session::forget('userData');
     }
 }
