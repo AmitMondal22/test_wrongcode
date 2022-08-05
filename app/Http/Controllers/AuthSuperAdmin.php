@@ -23,7 +23,11 @@ class AuthSuperAdmin extends Controller
             ]);
             return redirect('s-admin/login');
         }else{
-            return view('superAdmin.login.register');
+            ////if(!empty(Session::get('SuperAdminData')[0])){
+                return view('superAdmin.login.register');
+            //}
+            return redirect('s-admin');
+
         }
 
     }
@@ -38,7 +42,12 @@ class AuthSuperAdmin extends Controller
                     return redirect('s-admin');
             }
         }else{
-        return view('superAdmin.login.login');
+            //if( isset(Session::get('SuperAdminData'))){
+                // return Session::get('SuperAdminData.super_admin_id');
+                return view('superAdmin.login.login');
+            //}
+            return redirect('s-admin');
+
         }
     }
 
