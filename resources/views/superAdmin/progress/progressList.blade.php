@@ -35,6 +35,9 @@
                 @endforeach
               </div>
             </div>
+            <div>
+    {{ $data->links('superAdmin.s_admin_pagenation') }}
+</div>
             <!-- / Content -->
 <!-- / Content -->
 

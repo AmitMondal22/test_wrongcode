@@ -6,6 +6,8 @@ use App\Http\Controllers\AuthSuperAdmin;
 use App\Http\Controllers\superAdmin\Dashboard;
 use App\Http\Controllers\superAdmin\Progress;
 
+use App\Http\Controllers\superAdmin\Assets;
+
 // Route::get('/', function () {
 //     return view('weome');
 // });
@@ -31,6 +33,10 @@ Route::prefix('s-admin')->group(function () {
         //progress
         Route::match(['get', 'post'],'/progress-add', [Progress::class, 'index'])->name('progress-add');
         Route::get('/progress', [Progress::class, 'progress'])->name('progress');
+
+        //catagory
+        Route::match(['get', 'post'],'/catagory-add', [Assets::class, 'AddCatagory'])->name('catagory-add');
+        Route::get('/catagory-list', [Assets::class, 'ListCatagory'])->name('catagory-list');
     });
 
 });
