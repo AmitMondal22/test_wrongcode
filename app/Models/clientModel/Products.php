@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Client extends Model
+class Products extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
-    protected $table = 'client_users';
+    protected $table = 'products';
 
     /**
      * The attributes that are mass assignable.
@@ -19,7 +19,7 @@ class Client extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'fast_name', 'second_name','email', 'mobile', 'account_type', 'use_by', 'password', 'token', 'token_status', 'account_status', 'ip', 'created_at', 'updated_at'
+        'client_users_id', 'title', 'about', 'price', 'bookingPrice', 'discount_persentage', 'discount_money', 'youtube_url', 'banner_url', 'img_banner', 'active_status', 'category_id', 'area_location', 'location_cover_ariea', 'tag', 'created_by'
     ];
 
     /**
@@ -28,8 +28,7 @@ class Client extends Model
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
-        'token',
+
     ];
 
     /**
@@ -38,7 +37,7 @@ class Client extends Model
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+
     ];
 
     const CREATED_AT = 'created_at';

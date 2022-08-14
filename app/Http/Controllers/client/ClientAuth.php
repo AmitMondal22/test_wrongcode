@@ -30,7 +30,7 @@ class ClientAuth extends Controller
             //  "ip"=> get_ip(),
         ]);
         if(!empty($data)){
-            return 1;
+            return $data;
         }
         return 0;
 
