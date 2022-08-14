@@ -25,7 +25,7 @@ class Progress extends Controller
         }
     }
     public function progress(){
-       $data= Progres::Join('super_admins', 'super_admins.super_admin_id', '=', 'progres.super_admin_id')->paginate(10, array('progres.*', 'super_admins.super_admin_id','super_admins.name'));
+       $data= Progres::Join('super_admins', 'super_admins.super_admin_id', '=', 'progres.super_admin_id')->orderBy('progres.Progress_id', 'DESC')->paginate(10, array('progres.*', 'super_admins.super_admin_id','super_admins.name'));
 
 
         // return $data;

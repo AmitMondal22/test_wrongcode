@@ -16,12 +16,12 @@ class AddProduct extends Controller
             'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
 
            ]);
-           $img="";
-           $path="";
+        //    $img="";
+        //    $path="";
 
-        // $img = time().'.'.$r->file('image')->getClientOriginalName();
+        $img = time().'.'.$r->file('image')->getClientOriginalName();
 
-        // $path = $r->file('image')->store('public/clientUser/clientUser');
+        $path = $r->file('image')->store('public/clientUser/clientUser');
 
 
 
@@ -47,5 +47,24 @@ class AddProduct extends Controller
             return $data;
         }
         return 0;
+    }
+
+    public function list_product(){
+        $user_id=1;
+
+        $data= Products::where("client_users_id", "=", 1)->orderBy('product_id', 'DESC')->paginate(10);
+
+            return $data;
+    }
+    public function product_info($id){
+        $user_id=1;
+        $product_id=$id;
+
+
+        $data= Products::where([
+            ['client_users_id', '=', $user_id],
+            ['product_id', '=', $product_id]
+        ])->first();
+        return $data;
     }
 }

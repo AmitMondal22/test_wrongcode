@@ -24,7 +24,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/register',[ClientAuth::class,'register'])->name('register');
 
 //product
-Route::post('/list-product',[AddProduct::class,'add_product']);
+Route::post('/add-product',[AddProduct::class,'add_product']);
+// get product
+Route::get('/list_product',[AddProduct::class,'list_product']);
+//product info
+Route::get('/product-info/{id}',[AddProduct::class,'product_info']);
 
 //catagory
 Route::get('/catagory-list', [Assete::class, 'ListCatagory'])->name('catagory-list');
